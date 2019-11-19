@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+		  <beans>
+		
+		  <bean id="firstMessage" class="org.amany.entity.Message">
+		  <constructor-arg value="this is my first message inside u"/>
+		  </bean>
+		   <bean id="secondMessage" class="org.amany.entity.Message">
+		  <constructor-arg value="this is my second message inside u"/>
+		  </bean>
+		    <bean id="thirdMessage" class="org.amany.entity.Message">
+		  <constructor-arg value="this is my third message inside u"/>
+		  </bean>
+		  <bean id="user1" class="org.amany.entity.User">
+		    <constructor-arg index="0" value="Raoad"/>
+		    <constructor-arg index="1" value="Raoad@gmail.com"/>
+		    <constructor-arg index="2" value="Raoadpass"/>
+		  </bean>
+		  
+		  <bean id="user2" class="org.amany.entity.User">
+		    <constructor-arg index="0" value="amany"/>
+		    <constructor-arg index="1" value="amany@gmail.com"/>
+		    <constructor-arg index="2" value="amanypass"/>
+		  </bean>
+		  
+		  <bean id="user3" class="org.amany.entity.User">
+		    <constructor-arg index="0" value="mahmod"/>
+		    <constructor-arg index="1" value="mahmod@gmail.com"/>
+		    <constructor-arg index="2" value="mahmodpass"/>
+		  </bean>
+		  <bean id="user4" class="org.amany.entity.User">
+		    <constructor-arg index="0" value="tia"/>
+		    <constructor-arg index="1" value="tia@gmail.com"/>
+		    <constructor-arg index="2" value="tiapass"/>
+		  </bean>
+		    <bean id="users" class="org.amany.entity.Users">
+		     <property name="users">
+		     <list>
+		   	 <ref bean="user1"/>
+			  <ref bean ="user2"/>	
+			  <ref bean ="user3"/>	
+			  <ref bean ="user4"/>		  
+		
+		  </list></property>
+		    </bean>
+		    
+		  <bean id="Topic1" class="org.amany.entity.Topic">
+		  <constructor-arg  value="Math"/>
+		  <property name="messages">
+		  <list>
+		  <ref bean="firstMessage"/>
+		  <ref bean ="secondMessage"/>
+		  <ref bean ="thirdMessage"/>
+		  </list>
+		  
+		  </property>
+		 
+		  <property name="users">
+		     <list>
+		   	 <ref bean="user1"/>
+			  <ref bean ="user2"/>	
+			  <ref bean ="user3"/>	
+			  <ref bean ="user4"/>		  
+		
+		  </list></property>
+		  </bean>
+		   <bean id="Topic2" class="org.amany.entity.Topic">
+		   		  <constructor-arg  value="fun"/>
+		   
+		  <property name="messages">
+		  <list>
+		  <ref bean="firstMessage"/>
+		  <ref bean ="secondMessage"/>
+		  <ref bean ="thirdMessage"/>
+		  </list>
+		   
+ 
+		  </property>
+		  <property name="users">
+		     <list>
+		   	 <ref bean="user1"/>
+			  <ref bean ="user2"/>	
+			  <ref bean ="user3"/>	
+			  <ref bean ="user4"/>		  
+		
+		  </list></property>
+		  
+	
+		  </bean>
+		  
+		  
+		  </beans>
